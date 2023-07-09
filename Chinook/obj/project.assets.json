@@ -12269,11 +12269,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Athula\\Downloads\\New folder\\Chinook\\Chinook\\Chinook\\Chinook.csproj",
+      "projectUniqueName": "C:\\ProjectPractical\\Chinook\\Chinook.csproj",
       "projectName": "Chinook",
-      "projectPath": "C:\\Users\\Athula\\Downloads\\New folder\\Chinook\\Chinook\\Chinook\\Chinook.csproj",
+      "projectPath": "C:\\ProjectPractical\\Chinook\\Chinook.csproj",
       "packagesPath": "C:\\Users\\Athula\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Athula\\Downloads\\New folder\\Chinook\\Chinook\\Chinook\\obj\\",
+      "outputPath": "C:\\ProjectPractical\\Chinook\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Athula\\AppData\\Roaming\\NuGet\\NuGet.Config",
