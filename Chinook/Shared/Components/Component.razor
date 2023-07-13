@@ -1,0 +1,27 @@
+﻿
+    @foreach (var nickname in Nicknames)
+    {
+     @*   <li @key=nickname>
+            @nickname
+            <a @onclick="() => RemoveNickname(nickname)">Remove</a>
+        </li>*@
+
+        <NavLink class="nav-link" href="playlist/playlistnumber">
+            <i class="bi bi-music-note-list me-3" style="font-size: 1.25em"></i>@nickname
+        </NavLink>
+    }
+
+
+@code {
+    [Parameter]
+    public List<string> Nicknames { get; set; }
+
+    [Parameter]
+    public EventCallback<List<string>> NicknamesChanged { get; set; }
+
+    public async Task RemoveNickname(string nickname)
+    {
+        Nicknames.Remove(nickname);
+        await NicknamesChanged.InvokeAsync(Nicknames);
+    }
+}

@@ -24,12 +24,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXJ0aXN0UGFnZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/ProjectPractical/Chinook/Pages/ComponentPartial.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50UGFydGlhbC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/ProjectPractical/Chinook/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/ProjectPractical/Chinook/Pages/PlaylistPage.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGxheWxpc3RQYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/ProjectPractical/Chinook/Shared/Components/Component.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENvbXBvbmVudHNcQ29tcG9uZW50LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/ProjectPractical/Chinook/Shared/Components/Loading.razor]

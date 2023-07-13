@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DJef8RATsOMbcoiF/V8//v7E5kN4kdyXNyJS7GMQOEo=",
+  "Hash": "KAGIov9ogarmWj+Bak+6rUFPB8gYnYwucAup+9VMraU=",
   "Source": "Chinook",
   "BasePath": "_content/Chinook",
   "Mode": "Default",
@@ -270,6 +270,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\ProjectPractical\\Chinook\\wwwroot\\script\\site.js",
+      "SourceId": "Chinook",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\ProjectPractical\\Chinook\\wwwroot\\",
+      "BasePath": "_content/Chinook",
+      "RelativePath": "script/site.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\script\\site.js"
     },
     {
       "Identity": "C:\\Users\\Athula\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\7.0.8\\staticwebassets\\V5\\css\\site.css",
