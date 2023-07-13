@@ -10,6 +10,8 @@
 @*<h1>Test commit</h1>*@
 <h1>Artists</h1>
 
+<InputText @onkeyup="@Search" class="form-control col-md-6" @bind-Value="searchText" placeholder="Type text and hit the enter" />
+
 @if (Artists == null)
 {
     <Loading /> 
@@ -35,7 +37,10 @@ else
     </table>
 }
 
+@inject ViewModels.UserPlaylistViewModel userPlaylistViewModel;
+
 @code {
+    private string searchText;
     private List<Artist> Artists;
     [Inject] IDbContextFactory<ChinookContext> DbFactory { get; set; }
 
@@ -45,6 +50,7 @@ else
     protected override async Task OnInitializedAsync() {
         await InvokeAsync(StateHasChanged);
         Artists = await GetArtists();
+        searchText = "";
     }
 
     public async Task<List<Artist>> GetArtists()
@@ -59,6 +65,21 @@ else
         return dbContext.Albums.Where(a => a.ArtistId == artistId).ToList();
     }
 
-
-    
+    public async Task Search(KeyboardEventArgs e)
+    {
+        if (e.Code == "Enter" || e.Code == "NumpadEnter")
+        {
+            var dbContext = await DbFactory.CreateDbContextAsync();
+            if (!string.IsNullOrEmpty(searchText))
+            {
+                Artists = dbContext.Artists.Where(a => a.Name.ToLower()
+                .Contains(searchText.ToLower())).ToList();
+            }
+            else
+            {
+                Artists = dbContext.Artists.ToList();
+            }
+        }
+         
+    }
 }
