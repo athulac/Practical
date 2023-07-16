@@ -103,48 +103,10 @@ else
 
     private async Task FavoriteTrack(long trackId)
     {
-        await AssignDefaultPlaylist();
+        //await AssignDefaultPlaylist();
         var track = Playlist.Tracks.FirstOrDefault(t => t.TrackId == trackId);
         InfoMessage = $"Track {track.ArtistName} - {track.AlbumTitle} - {track.TrackName} added to playlist Favorites.";
-    }
-
-    private async Task CreateDefaultPlaylist()
-    {
-        var DbContext = await DbFactory.CreateDbContextAsync();
-        var playLists = await DbContext.Playlists.Where(x => x.Name == "My favorite tracks").ToListAsync();
-        if (!playLists.Any())
-        {
-            var playList = new Chinook.Models.Playlist
-            {
-                Name = "My favorite tracks",
-            };
-            await DbContext.AddAsync(playList);
-        }
-    }
-
-    private async Task<Playlist> GetDefaultPlaylist()
-    {
-        var DbContext = await DbFactory.CreateDbContextAsync();
-        var playList = await DbContext.Playlists.FirstOrDefaultAsync(t => t.Name == "My favorite tracks");
-
-        return playList;
-    }
-
-    private async Task AssignDefaultPlaylist()
-    {
-        await CreateDefaultPlaylist();
-        var DbContext = await DbFactory.CreateDbContextAsync();
-        var playListDef = await GetDefaultPlaylist();
-
-        var playList = new UserPlaylist
-            {
-                UserId = await GetUserId(),
-                PlaylistId = playListDef.PlaylistId,
-            };
-        await DbContext.UserPlaylists.AddAsync(playList);                
-    }
-
-
+    }       
 
     private void UnfavoriteTrack(long trackId)
     {
@@ -155,7 +117,6 @@ else
     private void RemoveTrack(long trackId)
     {
         CloseInfoMessage();
-
     }
 
     private void CloseInfoMessage()

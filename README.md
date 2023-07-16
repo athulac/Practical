@@ -31,3 +31,20 @@ Please put the code in Github. Please put the original code (our code) in the ma
 
 caathu@gmail.com
 Ab@123456
+
+
+=========================================================================================
+Rework summary
+
+1. used seperate services and used DI
+2. "My favorite tracks" automatic created and did the add to favorite
+3. Play list display in navbar left, modifications show in the nav and its load witout whole page reload.
+4. add tracks to playlist popup was done, create new playlist and assing it to user and then assign tracks, modify and add track to exisist playlist.
+5. search by name contain done
+
+* code add to git hub, crate development branch from master, working on dev and commit, then make pullrequest and merge it with master.
+* comments added for playlist service few methods.
+
+* for this on github: https://github.com/athulac/Practical
+* for more on github: https://github.com/athulac
+* personal site developed and hosted by myselves, .net core based: http://www.casln.com/
