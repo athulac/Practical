@@ -19,34 +19,16 @@
             </NavLink>
         </div>
         <div class="nav-item px-3" id="componentPlaceholder">
- 
-         @*   <NavLink class="nav-link" href="playlist/playlistnumber">
-                <i class="bi bi-music-note-list me-3" style="font-size: 1.25em"></i>My favorite tracks
-            </NavLink>*@
-       
-            <Component @bind-Nicknames="userPlaylistViewModel.Names" />
-
-        </div>
-
- 
-
-
-        <div id="test">
-            <textarea @bind="str" @bind:event="oninput"/>
-            <p>Count: @str.Length</P>
-        </div>
-
-    </nav>
-
-    <button type="button" class="btn btn-info" @onload="ShowAlertWindow">Show Alert Window</button>
-
+            <Component @bind-UserPlaylistViewModel="userPlaylistViewModel" />
+        </div>        
+    </nav>   
 </div>
 
 
 @inject ViewModels.UserPlaylistViewModel userPlaylistViewModel;
 
 @code {
-      [CascadingParameter] private Task<AuthenticationState> authenticationState { get; set; }
+    [CascadingParameter] private Task<AuthenticationState> authenticationState { get; set; }
     private bool collapseNavMenu = true;
 
     private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
@@ -56,17 +38,9 @@
         collapseNavMenu = !collapseNavMenu;
     }
 
-
-    public string str { get; set; } = "";
     private string CurrentUserId;
 
     [Inject] IDbContextFactory<ChinookContext> DbFactory { get; set; }
-    [Inject]
-    public IJSRuntime JSRuntime { get; set; }
-    public async Task ShowAlertWindow()
-    {
-        await JSRuntime.InvokeVoidAsync("showAlert", "JS function called from .NET");
-    }
 
     private async Task<List<Chinook.Models.UserPlaylist>> GetUserPlaylists()
     {
@@ -87,10 +61,10 @@
     public async Task InitUserPlaylists()
     {
         var playlists = await GetUserPlaylists();
-        userPlaylistViewModel.Names.Clear();
+        userPlaylistViewModel.PlayLists.Clear();
         foreach (var item in playlists)
         {            
-            userPlaylistViewModel.Names.Add(item.Playlist.Name);
+            userPlaylistViewModel.PlayLists.Add(item.Playlist);
         }
     }
 
@@ -98,7 +72,6 @@
     {
         var DbContext = await DbFactory.CreateDbContextAsync();
           CurrentUserId = await GetUserId();
-
         InitUserPlaylists();
     }
 

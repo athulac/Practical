@@ -234,7 +234,7 @@ public partial class ChinookContext : IdentityDbContext<ChinookUser>
 
                         j.ToTable("PlaylistTrack");
 
-                        j.HasIndex(new[] { "TrackId" }, "IFK_PlaylistTrackTrackId");
+                        j.HasIndex(new[] { "PlaylistId", "TrackId" }, "IFK_PlaylistTrackTrackId");
                     });
         });
 

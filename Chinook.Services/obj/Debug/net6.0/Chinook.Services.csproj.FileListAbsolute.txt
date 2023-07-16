@@ -1,0 +1,12 @@
+C:\ProjectPractical\Chinook.Services\bin\Debug\net6.0\Chinook.Services.deps.json
+C:\ProjectPractical\Chinook.Services\bin\Debug\net6.0\Chinook.Services.dll
+C:\ProjectPractical\Chinook.Services\bin\Debug\net6.0\Chinook.Services.pdb
+C:\ProjectPractical\Chinook.Services\obj\Debug\net6.0\Chinook.Services.csproj.AssemblyReference.cache
+C:\ProjectPractical\Chinook.Services\obj\Debug\net6.0\Chinook.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\ProjectPractical\Chinook.Services\obj\Debug\net6.0\Chinook.Services.AssemblyInfoInputs.cache
+C:\ProjectPractical\Chinook.Services\obj\Debug\net6.0\Chinook.Services.AssemblyInfo.cs
+C:\ProjectPractical\Chinook.Services\obj\Debug\net6.0\Chinook.Services.csproj.CoreCompileInputs.cache
+C:\ProjectPractical\Chinook.Services\obj\Debug\net6.0\Chinook.Services.dll
+C:\ProjectPractical\Chinook.Services\obj\Debug\net6.0\refint\Chinook.Services.dll
+C:\ProjectPractical\Chinook.Services\obj\Debug\net6.0\Chinook.Services.pdb
+C:\ProjectPractical\Chinook.Services\obj\Debug\net6.0\ref\Chinook.Services.dll
